@@ -1,0 +1,7 @@
+{
+    "name": "myproject/phpcompatibility-checker",
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.13",
+        "phpcompatibility/php-compatibility": "dev-develop"
+    }
+}

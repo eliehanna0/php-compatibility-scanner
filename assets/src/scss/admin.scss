@@ -1,0 +1,551 @@
+/**
+ * PHP Compatibility Checker Admin Styles
+ * Main SCSS file for the plugin's admin interface
+ * 
+ * This file maintains the exact same appearance as the original admin.css
+ */
+
+/* PHP Compatibility Checker Admin Styles */
+
+.phpcompat-output {
+    background: #1e1e1e;
+    color: #ffffff;
+    padding: 12px;
+    border-radius: 4px;
+    font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+    font-size: 12px;
+    line-height: 1.4;
+    white-space: pre-wrap;
+    max-height: 400px;
+    overflow-y: auto;
+    margin-top: 8px;
+}
+
+.phpcompat-subheading {
+    font-weight: 600;
+    margin: 20px 0 10px 0;
+    color: #23282d;
+}
+
+.phpcompat-status {
+    font-style: italic;
+    color: #666;
+    margin: 0 0 0 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.phpcompat-targets {
+    margin: 20px 0;
+}
+
+.phpcompat-loader {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-style: italic;
+}
+
+.phpcompat-target-group {
+    margin: 15px 0 10px 0;
+    font-weight: 600;
+    color: #23282d;
+}
+
+.phpcompat-target-item {
+    display: block;
+    margin: 8px 0;
+    padding: 8px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.phpcompat-target-item:hover {
+    background: #f0f0f0;
+}
+
+.phpcompat-target-item input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.phpcompat-flag .spinner {
+    float: none;
+    margin: 0;
+    visibility: visible;
+}
+
+.phpcompat-status-count {
+    font-size: 11px;
+    font-weight: normal;
+    margin-left: 4px;
+    opacity: 0.8;
+}
+
+/* Batch scanning styles */
+
+.phpcompat-progress {
+    border: 1px solid #b3d9ff;
+    border-radius: 4px;
+    padding: 12px;
+}
+
+.phpcompat-progress-bar {
+    background: #e0e0e0;
+    border-radius: 3px;
+    height: 20px;
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+.phpcompat-progress-fill {
+    background: #0073aa;
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.phpcompat-progress-text {
+    margin-top: 8px;
+    font-style: italic;
+    color: #0073aa;
+    text-align: center;
+}
+
+.phpcompat-summary {
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    padding: 12px;
+    margin-bottom: 15px;
+    color: #2da949;
+}
+
+.phpcompat-batch-results {
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.phpcompat-batch {
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 12px;
+    margin-bottom: 10px;
+}
+
+.phpcompat-batch:last-child {
+    margin-bottom: 0;
+}
+
+.phpcompat-batch-output {
+    background: #1e1e1e;
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 3px;
+    font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+    font-size: 11px;
+    line-height: 1.3;
+    white-space: pre-wrap;
+    overflow-y: visible;
+    margin-top: 8px;
+}
+
+.phpcompat-message {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin-top: 10px;
+    color: #856404;
+}
+
+.main_output {
+    overflow-y: visible;
+    max-height: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1rem;
+}
+
+/* Sticky Controls */
+.phpcompat-sticky-controls {
+    position: sticky;
+    z-index: 100;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    margin: 0 -20px 20px -20px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    top: 0;
+}
+
+/* Scan Options */
+.phpcompat-options {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 20px;
+    margin: 15px 0 0 0;
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.phpcompat-option-group {
+    margin: 0;
+    flex: 0 0 auto;
+}
+
+.phpcompat-option-group label {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+.phpcompat-option-group input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.phpcompat-option-group select {
+    margin-left: 8px;
+    min-width: 120px;
+}
+
+.phpcompat-option-group button {
+    margin: 0;
+    height: 30px;
+    line-height: 28px;
+}
+
+/* Tooltip positioning for option groups */
+.phpcompat-option-group .phpcompat-help-tip {
+    margin-left: 5px;
+    vertical-align: middle;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    background: #0073aa;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: help;
+    text-decoration: none;
+}
+
+.phpcompat-option-group .phpcompat-help-tip:hover {
+    background: #005a87;
+}
+
+.phpcompat-option-group label {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Selected Targets Display */
+.phpcompat-selected-targets label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+.phpcompat-selected-targets-list {
+    min-width: 200px;
+    max-width: 300px;
+}
+
+.phpcompat-selected-targets-list .phpcompat-target-tag {
+    display: inline-block;
+    background: #0073aa;
+    color: #fff;
+    padding: 2px 8px;
+    margin: 2px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.phpcompat-selected-targets-list .phpcompat-target-tag.plugin {
+    background: #0073aa;
+}
+
+.phpcompat-selected-targets-list .phpcompat-target-tag.theme {
+    background: #46b450;
+}
+
+.phpcompat-no-targets {
+    color: #666;
+    font-style: italic;
+    font-size: 12px;
+}
+
+/* Scan Summary Display */
+.phpcompat-scan-summary label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+.phpcompat-scan-summary-list {
+    min-width: 200px;
+    max-width: 300px;
+}
+
+.phpcompat-scan-summary-list .phpcompat-scan-result {
+    display: inline-block;
+    padding: 2px 8px;
+    margin: 2px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.phpcompat-scan-summary-list .phpcompat-scan-result.success {
+    background: #46b450;
+    color: #fff;
+}
+
+.phpcompat-scan-summary-list .phpcompat-scan-result.errors {
+    background: #dc3232;
+    color: #fff;
+}
+
+.phpcompat-scan-summary-list .phpcompat-scan-result.warnings {
+    background: #ffb900;
+    color: #000;
+}
+
+.phpcompat-no-scans {
+    color: #666;
+    font-style: italic;
+    font-size: 12px;
+}
+
+/* How to Use Section */
+.phpcompat-how-to-use {
+    margin: 20px 0;
+}
+
+.phpcompat-how-to-use h2 {
+    cursor: pointer;
+    user-select: none;
+}
+
+.phpcompat-toggle-icon {
+    display: inline-block;
+    margin-right: 8px;
+    transition: transform 0.2s ease;
+}
+
+.phpcompat-how-to-use.collapsed .phpcompat-toggle-icon {
+    transform: rotate(-90deg);
+}
+
+.phpcompat-how-to-use-content {
+    display: block;
+    margin-top: 15px;
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.phpcompat-how-to-use.collapsed .phpcompat-how-to-use-content {
+    display: none;
+}
+
+.phpcompat-how-to-use-content ol {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.phpcompat-how-to-use-content li {
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.phpcompat-status-example {
+    font-family: monospace;
+    background: #f0f0f0;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+/* Toggleable Batch Results */
+.phpcompat-batch-results-toggle {
+    cursor: pointer;
+    user-select: none;
+    padding: 8px 12px;
+    background: #f0f0f018;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.phpcompat-batch-results-toggle:hover {
+    background: transparent;
+}
+
+.phpcompat-batch-results-toggle .toggle-icon {
+    transition: transform 0.2s ease;
+}
+
+.phpcompat-batch-results.collapsed .toggle-icon {
+    transform: rotate(-90deg);
+}
+
+.phpcompat-batch-results.collapsed .phpcompat-batch-results-content {
+    display: none;
+}
+
+/* Ensure toggle icon is visible and properly positioned */
+.phpcompat-batch-results-toggle .toggle-icon {
+    transition: transform 0.2s ease;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.phpcompat-option-group .description {
+    display: none;
+}
+
+.phpcompat-output-right {
+    display: flex;
+    flex-flow: column;
+}
+
+/* Responsive adjustments for sticky controls */
+@media screen and (max-width: 1200px) {
+    .phpcompat-options {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .phpcompat-option-group {
+        flex: 1 1 auto;
+    }
+}
+
+/* Responsive layout for output columns */
+@media screen and (max-width: 768px) {
+    .phpcompat-output {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .phpcompat-output-left {
+        flex: none;
+        width: 100%;
+    }
+
+    .phpcompat-output-right {
+        flex: none;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 782px) {
+    .phpcompat-sticky-controls {
+        top: 46px;
+        margin: 0 -10px 15px -10px;
+        padding: 15px;
+    }
+
+    .phpcompat-options {
+        padding: 10px;
+        gap: 10px;
+    }
+}
+
+/* Mobile-specific adjustments for sticky controls */
+@media screen and (max-width: 600px) {
+    .phpcompat-sticky-controls {
+        position: relative;
+        top: auto;
+        margin: 0 0 20px 0;
+        padding: 15px;
+        box-shadow: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .phpcompat-options {
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .phpcompat-option-group {
+        margin-bottom: 10px;
+    }
+
+    .phpcompat-option-group select {
+        min-width: 100px;
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+    .phpcompat-option-group button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+/* Disable sticky positioning on very small screens and mobile devices */
+@media screen and (max-width: 480px) {
+    .phpcompat-sticky-controls {
+        position: static;
+        margin: 0 0 20px 0;
+        padding: 15px;
+        box-shadow: none;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+}
+
+/* Additional mobile optimizations */
+@media screen and (max-width: 600px) {
+
+    .phpcompat-selected-targets-list,
+    .phpcompat-scan-summary-list {
+        min-width: auto;
+        max-width: none;
+    }
+
+    .phpcompat-how-to-use-content {
+        padding: 10px;
+    }
+
+    .phpcompat-how-to-use-content ol {
+        padding-left: 20px;
+    }
+}
+
+/* Touch-friendly improvements for mobile */
+@media (hover: none) and (pointer: coarse) {
+    .phpcompat-target-item {
+        padding: 12px 8px;
+        min-height: 44px;
+    }
+
+    .phpcompat-option-group button {
+        min-height: 44px;
+        padding: 8px 16px;
+    }
+
+    .phpcompat-batch-results-toggle {
+        min-height: 44px;
+        padding: 12px 16px;
+    }
+}

@@ -1,0 +1,67 @@
+<?php return array(
+    'root' => array(
+        'name' => 'myproject/phpcompatibility-checker',
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
+        'reference' => null,
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => true,
+    ),
+    'versions' => array(
+        'dealerdirect/phpcodesniffer-composer-installer' => array(
+            'pretty_version' => 'v1.1.2',
+            'version' => '1.1.2.0',
+            'reference' => 'e9cf5e4bbf7eeaf9ef5db34938942602838fc2b1',
+            'type' => 'composer-plugin',
+            'install_path' => __DIR__ . '/../dealerdirect/phpcodesniffer-composer-installer',
+            'aliases' => array(),
+            'dev_requirement' => true,
+        ),
+        'myproject/phpcompatibility-checker' => array(
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
+            'reference' => null,
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'phpcompatibility/php-compatibility' => array(
+            'pretty_version' => 'dev-develop',
+            'version' => 'dev-develop',
+            'reference' => '5e207bcca923a6afd5a8084427cb43a37bf306d3',
+            'type' => 'phpcodesniffer-standard',
+            'install_path' => __DIR__ . '/../phpcompatibility/php-compatibility',
+            'aliases' => array(
+                0 => '10.x-dev',
+            ),
+            'dev_requirement' => true,
+        ),
+        'phpcsstandards/phpcsutils' => array(
+            'pretty_version' => '1.1.0',
+            'version' => '1.1.0.0',
+            'reference' => '65355670ac17c34cd235cf9d3ceae1b9252c4dad',
+            'type' => 'phpcodesniffer-standard',
+            'install_path' => __DIR__ . '/../phpcsstandards/phpcsutils',
+            'aliases' => array(),
+            'dev_requirement' => true,
+        ),
+        'squizlabs/php_codesniffer' => array(
+            'pretty_version' => '3.13.2',
+            'version' => '3.13.2.0',
+            'reference' => '5b5e3821314f947dd040c70f7992a64eac89025c',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../squizlabs/php_codesniffer',
+            'aliases' => array(),
+            'dev_requirement' => true,
+        ),
+        'wimg/php-compatibility' => array(
+            'dev_requirement' => true,
+            'replaced' => array(
+                0 => '*',
+            ),
+        ),
+    ),
+);

@@ -1,0 +1,44 @@
+{
+  "name": "phpcompatibility-checker",
+  "version": "1.0.0",
+  "description": "WordPress plugin for checking PHP compatibility",
+  "main": "assets/dist/admin.js",
+  "scripts": {
+    "build": "webpack --mode=production && npm run build:css",
+    "dev": "concurrently \"webpack --mode=development --watch\" \"npm run dev:css\"",
+    "build:css": "sass assets/src/scss/admin.scss:assets/dist/admin.css --style=compressed",
+    "dev:css": "sass assets/src/scss/admin.scss:assets/dist/admin.css --watch",
+    "clean": "rimraf assets/dist/*",
+    "lint": "eslint assets/src/js/**/*.js",
+    "lint:fix": "eslint assets/src/js/**/*.js --fix"
+  },
+  "keywords": [
+    "wordpress",
+    "plugin",
+    "php",
+    "compatibility",
+    "phpcs"
+  ],
+  "author": "Your Name",
+  "license": "GPL-2.0-or-later",
+  "devDependencies": {
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.23.0",
+    "babel-loader": "^9.1.3",
+    "concurrently": "^9.2.0",
+    "css-loader": "^6.8.1",
+    "eslint": "^8.51.0",
+    "mini-css-extract-plugin": "^2.7.6",
+    "rimraf": "^5.0.5",
+    "sass": "^1.69.0",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

@@ -1,0 +1,31 @@
+# Git attributes for clean distribution
+# Files marked with export-ignore will NOT be included in ZIP downloads
+# Files marked with -export-ignore (or no mark) WILL be included
+
+# Production files - INCLUDE in ZIP
+*.php -export-ignore
+*.txt -export-ignore
+includes/ -export-ignore
+assets/ -export-ignore
+
+# Development files - EXCLUDE from ZIP
+vendor/ export-ignore
+node_modules/ export-ignore
+.gitignore export-ignore
+.distignore export-ignore
+webpack.config.js export-ignore
+package.json export-ignore
+package-lock.json export-ignore
+composer.json export-ignore
+composer.lock export-ignore
+.eslintrc.js export-ignore
+.babelrc export-ignore
+.editorconfig export-ignore
+.git/ export-ignore
+.github/ export-ignore
+tests/ export-ignore
+*.sql export-ignore
+*.tar.gz export-ignore
+*.zip export-ignore
+Thumbs.db export-ignore
+.DS_Store export-ignore
