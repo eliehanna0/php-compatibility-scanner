@@ -1,9 +1,9 @@
-=== PHP Compatibility Checker ===
+=== PHPCompatibility Checker ===
 Contributors: eliehanna
 Donate link: 
-Tags: development, php, compatibility, testing, code-quality, phpcs, wordpress-development
+Tags:  compatibility, testing, code-quality, phpcs, wordpress-development
 Requires at least: 4.5
-Tested up to: 6.8.2
+Tested up to: 6.8
 Requires PHP: 7.4
 Stable tag: 1.0.0
 License: GPLv2 or later

@@ -145,7 +145,7 @@ class FileManager
 	public function cleanup_temp_file($file_path)
 	{
 		if ($file_path && file_exists($file_path)) {
-			unlink($file_path);
+			wp_delete_file($file_path);
 		}
 	}
 }

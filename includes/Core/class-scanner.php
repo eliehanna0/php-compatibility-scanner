@@ -200,7 +200,7 @@ class Scanner
 
 		// Clean up temp file if created.
 		if ($this->temp_file && file_exists($this->temp_file)) {
-			unlink($this->temp_file);
+			wp_delete_file($this->temp_file);
 			$this->temp_file = null;
 		}
 

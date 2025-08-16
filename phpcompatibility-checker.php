@@ -12,7 +12,7 @@
  * Text Domain: phpcompatibility-checker
  * Domain Path: /languages
  * Requires PHP: 7.4
- * Tested up to: 6.8.2
+ * Tested up to: 6.8
  *
  * @package         EH\PHPCompatibilityChecker
  * @author          EH

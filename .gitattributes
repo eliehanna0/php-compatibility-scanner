@@ -13,6 +13,7 @@ vendor/ export-ignore
 node_modules/ export-ignore
 .gitignore export-ignore
 .distignore export-ignore
+.gitattributes export-ignore
 webpack.config.js export-ignore
 package.json export-ignore
 package-lock.json export-ignore
