@@ -52,7 +52,7 @@ class AjaxHandler
 	private function verify_ajax_request()
 	{
 		if (! current_user_can('manage_options')) {
-			wp_send_json_error(array('message' => __('Unauthorized', 'phpcompatibility-checker')), 403);
+			wp_send_json_error(array('message' => __('Unauthorized', 'php-compatibility-scanner')), 403);
 		}
 
 		// Verify AJAX referer and nonce.
@@ -102,7 +102,7 @@ class AjaxHandler
 
 		require_once ABSPATH . 'wp-admin/includes/plugin.php';
 		$plugins = get_plugins();
-		$self    = plugin_basename(dirname(dirname(__DIR__)) . '/phpcompatibility-checker.php');
+		$self    = plugin_basename(dirname(dirname(__DIR__)) . '/php-compatibility-scanner.php');
 
 		$plugin_targets = array();
 		foreach ($plugins as $file => $data) {
@@ -287,7 +287,7 @@ class AjaxHandler
 		update_option('phpcompat_checker_php_version', $php_version);
 		update_option('phpcompat_checker_skip_vendor', $skip_vendor);
 
-		wp_send_json_success(array('message' => __('Options saved successfully.', 'phpcompatibility-checker')));
+		wp_send_json_success(array('message' => __('Options saved successfully.', 'php-compatibility-scanner')));
 	}
 
 	/**
@@ -298,7 +298,7 @@ class AjaxHandler
 		$this->verify_ajax_request();
 
 		update_option('phpcompat_checker_stop_scan', '1');
-		wp_send_json_success(array('message' => __('Scan stop requested.', 'phpcompatibility-checker')));
+		wp_send_json_success(array('message' => __('Scan stop requested.', 'php-compatibility-scanner')));
 	}
 
 	/**

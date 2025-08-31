@@ -1,4 +1,4 @@
-=== PHPCompatibility Checker ===
+=== PHP Compatibility Scanner ===
 Contributors: eliehanna
 Donate link: 
 Tags:  compatibility, testing, code-quality, phpcs, wordpress-development

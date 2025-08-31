@@ -58,7 +58,7 @@ class Plugin
 	 */
 	private function __construct()
 	{
-		$this->menu_title = __('PHPCompatibility Checker', 'phpcompatibility-checker');
+		$this->menu_title = __('PHP Compatibility Scanner', 'php-compatibility-scanner');
 		$this->init_hooks();
 	}
 
@@ -92,7 +92,7 @@ class Plugin
 			$this->menu_title,
 			$this->menu_title,
 			'manage_options',
-			'phpcompatibility-checker',
+			'php-compatibility-scanner',
 			array($this, 'render_admin_page')
 		);
 	}
@@ -113,7 +113,7 @@ class Plugin
 	 */
 	public function enqueue_admin_assets($hook)
 	{
-		if ('tools_page_phpcompatibility-checker' !== $hook) {
+		if ('tools_page_php-compatibility-scanner' !== $hook) {
 			return;
 		}
 
