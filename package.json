@@ -1,6 +1,6 @@
 {
-  "name": "phpcompatibility-checker",
-  "version": "1.0.0",
+  "name": "eli-php-compatibility-checker",
+  "version": "1.0.1",
   "description": "WordPress plugin for checking PHP compatibility",
   "main": "assets/dist/admin.js",
   "scripts": {

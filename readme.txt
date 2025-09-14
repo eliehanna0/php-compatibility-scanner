@@ -1,11 +1,11 @@
-=== PHP Compatibility Scanner ===
+=== Eli's PHP Compatibility Scanner ===
 Contributors: eliehanna
 Donate link: 
 Tags:  compatibility, testing, code-quality, phpcs, wordpress-development
 Requires at least: 4.5
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -77,7 +77,7 @@ This plugin leverages [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSni
 
 1. **Download/Install** the plugin to your `wp-content/plugins/` directory
 2. **Activate Plugin** in WordPress Admin → Plugins
-3. **Access Tool** via WordPress Admin → Tools → PHP Compatibility
+3. **Access Tool** via WordPress Admin → Tools → PHP Compatibility Scanner
 
 **Note**: All required dependencies (PHP_CodeSniffer and PHPCompatibility) are included with the plugin - no additional setup required!
 

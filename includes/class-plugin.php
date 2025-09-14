@@ -58,7 +58,7 @@ class Plugin
 	 */
 	private function __construct()
 	{
-		$this->menu_title = __('PHP Compatibility Scanner', 'php-compatibility-scanner');
+		$this->menu_title = __('PHP Compatibility Scanner', 'eli-php-compatibility-scanner');
 		$this->init_hooks();
 	}
 

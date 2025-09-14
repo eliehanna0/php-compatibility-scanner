@@ -52,7 +52,7 @@ class AjaxHandler
 	private function verify_ajax_request()
 	{
 		if (! current_user_can('manage_options')) {
-			wp_send_json_error(array('message' => __('Unauthorized', 'php-compatibility-scanner')), 403);
+			wp_send_json_error(array('message' => __('Unauthorized', 'eli-php-compatibility-scanner')), 403);
 		}
 
 		// Verify AJAX referer and nonce.
@@ -287,7 +287,7 @@ class AjaxHandler
 		update_option('phpcompat_checker_php_version', $php_version);
 		update_option('phpcompat_checker_skip_vendor', $skip_vendor);
 
-		wp_send_json_success(array('message' => __('Options saved successfully.', 'php-compatibility-scanner')));
+		wp_send_json_success(array('message' => __('Options saved successfully.', 'eli-php-compatibility-scanner')));
 	}
 
 	/**
@@ -298,7 +298,7 @@ class AjaxHandler
 		$this->verify_ajax_request();
 
 		update_option('phpcompat_checker_stop_scan', '1');
-		wp_send_json_success(array('message' => __('Scan stop requested.', 'php-compatibility-scanner')));
+		wp_send_json_success(array('message' => __('Scan stop requested.', 'eli-php-compatibility-scanner')));
 	}
 
 	/**
@@ -313,7 +313,7 @@ class AjaxHandler
 			if ('plugin' === $type) {
 				$plugin_file = WP_PLUGIN_DIR . '/' . $slug;
 				if (file_exists($plugin_file)) {
-					return dirname($plugin_file);
+					return plugin_dir_path($plugin_file);
 				}
 			} elseif ('theme' === $type) {
 				$theme_dir = get_theme_root() . '/' . $slug;

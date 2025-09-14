@@ -75,7 +75,7 @@ class Scanner
 		$disabled = array_map('trim', explode(',', (string) ini_get('disable_functions')));
 		if (in_array('exec', $disabled, true)) {
 			$status['execEnabled'] = false;
-			$status['messages'][]  = __('exec() is disabled in php.ini', 'php-compatibility-scanner');
+			$status['messages'][]  = __('exec() is disabled in php.ini', 'eli-php-compatibility-scanner');
 		}
 
 		// Detect PHP binary and phpcs path.
@@ -93,7 +93,7 @@ class Scanner
 			$status['phpcsVersionOutput'] = $version_result['output'];
 
 			if (! $version_result['success']) {
-				$status['messages'][] = __('Unable to run phpcs --version with detected PHP binary.', 'php-compatibility-scanner');
+				$status['messages'][] = __('Unable to run phpcs --version with detected PHP binary.', 'eli-php-compatibility-scanner');
 			}
 		}
 
