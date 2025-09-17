@@ -9,7 +9,6 @@ includes/ -export-ignore
 assets/ -export-ignore
 
 # Development files - EXCLUDE from ZIP
-vendor/ export-ignore
 node_modules/ export-ignore
 .gitignore export-ignore
 .distignore export-ignore
