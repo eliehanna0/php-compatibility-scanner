@@ -1,5 +1,6 @@
-# Build artifacts
-assets/dist/
+assets/dist/*.map
+*.css.map
+*.js.map
 node_modules/
 
 # Dependencies
